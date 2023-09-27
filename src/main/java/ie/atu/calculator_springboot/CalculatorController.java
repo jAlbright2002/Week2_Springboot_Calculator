@@ -19,6 +19,9 @@ public class CalculatorController {
             case "add":
                 return calcResult.add();
 
+            case "subtract":
+                return calcResult.subtract();
+
         }
 
         return 0;
