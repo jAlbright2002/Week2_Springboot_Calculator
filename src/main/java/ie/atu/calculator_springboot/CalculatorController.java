@@ -9,8 +9,19 @@ public class CalculatorController {
 
 
     @GetMapping("/calculate")
-    public int calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String operations) {
-        return 1;
+    public int calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String operation) {
+
+        int total = 0;
+
+        switch (operation) {
+
+            case "add":
+                total = num1 + num2;
+
+        }
+
+
+        return total;
     }
 
 
