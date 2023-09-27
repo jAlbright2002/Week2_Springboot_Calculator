@@ -22,6 +22,12 @@ public class CalculatorController {
             case "subtract":
                 return calcResult.subtract();
 
+            case "multiply":
+                return calcResult.multiply();
+
+            case "divide":
+                return calcResult.divide();
+
         }
 
         return 0;
