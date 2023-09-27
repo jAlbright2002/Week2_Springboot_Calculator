@@ -7,21 +7,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CalculatorController {
 
-
     @GetMapping("/calculate")
     public int calculate(@RequestParam int num1, @RequestParam int num2, @RequestParam String operation) {
 
-        int total = 0;
+        CalcResult calcResult = new CalcResult();
+        calcResult.setNum1(num1);
+        calcResult.setNum2(num2);
 
-        switch (operation) {
+        switch (operation)  {
 
             case "add":
-                total = num1 + num2;
+                return calcResult.add();
 
         }
 
+        return 0;
 
-        return total;
     }
 
 
